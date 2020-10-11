@@ -1,11 +1,11 @@
 import {IsNotEmpty} from 'class-validator';
 
-export class CreateTaskDto {
+export class CreateCharacterDto {
 
     @IsNotEmpty()
-    title: string;
+    name: string;
     
     @IsNotEmpty()
-    description: string;
+    breed: string;
 }
 
