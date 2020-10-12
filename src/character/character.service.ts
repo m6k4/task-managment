@@ -10,10 +10,10 @@ export class CharacterService {
     }
 
     async createCharacter(createDto: CreateCharacterDto) {
+        console.log(process.env.MONGO_USER)
         const newCharacter = new this.characterModel(createDto);
-         const characterId = await newCharacter.save();
-         console.log(characterId);
-        //  return characterId;
+         const result = await newCharacter.save();
+         return result.id;
     }
     
 }
